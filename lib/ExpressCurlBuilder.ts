@@ -53,4 +53,4 @@ const reqtoCurl = function (req: ExpressCurlRequest): string | undefined {
 
 
 };
-module.exports=curlFromRequest
+module.exports=reqtoCurl
