@@ -1,5 +1,0 @@
-//12:00PM
-
-curl --location --request POST 'http://localhost:3000/helloPost' -H 'host: localhost:3000' -H 'connection: keep-alive' -H 'sec-ch-ua: " Not A;Brand";v="99", "Chromium";v="102", "Google Chrome";v="102"' -H 'sec-ch-ua-mobile: ?0' -H 'sec-ch-ua-platform: "macOS"' -H 'dnt: 1' -H 'upgrade-insecure-requests: 1' -H 'user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36' -H 'accept: application/json' -H 'sec-fetch-site: none' -H 'sec-fetch-mode: navigate' -H 'sec-fetch-user: ?1' -H 'sec-fetch-dest: document' -H 'accept-encoding: gzip, deflate, br' -H 'accept-language: en-IE,en;q=0.9,ar-AE;q=0.8,ar;q=0.7,en-GB;q=0.6,en-US;q=0.5' -H 'if-none-match: W/"c-Lve95gjOVATpfV8EL5X4nxwjKHE"' -H 'content-type: application/json' -H 'cache-control: no-cache' -H 'postman-token: 017bea59-b968-4f24-bcc2-26f3ee574d8e' -H 'content-length: 35'  
-
-//12:00PM
