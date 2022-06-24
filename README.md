@@ -2,11 +2,24 @@
 
   Simple, unopinionated, reusuable utility package for [express](https://expressjs.com).
 ```js
-const express = require('express')
-const app = express()
 
+import { reqtoCurl, ExpressResponseType } from 'express-curl-generator';
+import { Request, Response, NextFunction } from 'express';
 app.get('/', function (req, res) {
-  res.send('Hello World')
+
+
+    // Console Logging
+    reqtoCurl({
+        request: req,
+        type: ExpressResponseType.LOG,
+      })
+      
+     // WRITE Logging
+     reqtoCurl({
+        request: req,
+        type: ExpressResponseType.WRITE,
+      })    
+      
 })
 
 app.listen(3000)
@@ -36,6 +49,7 @@ for more information.
 ## Features
 
   * Console Logging
+  * Write Curl request in a file
   * Convert Express Request to curl
   * Middleware
  
