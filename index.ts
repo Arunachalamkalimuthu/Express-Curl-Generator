@@ -9,17 +9,17 @@ import { _writeCurl, _printCurl } from "./ExpressCurlFactory"
 --header 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7ImlkIjoyLCJyb2xlSWQiOjEsImZ1bGxOYW1lIjoiTGF3eWVyIDAwMCIsImVtYWlsIjoibGF3eWVyMDAwQGdtYWlsLmNvbSIsInBob25lTnVtYmVyIjoiKzkxNzUzOTkwMDAwMCJ9LCJpYXQiOjE2NTUwMjYxMjh9.X9nVdOAvDkC5hnIpIn-M_yODtoDHGsIN1SQqeFHEsSk'
  */
 
-const headerExcludings=['content-length']
+const headerExcluding=['content-length']
 
 const _buildCurl = function (req: ExpressCurlRequest): string {
   const request = req.request
   const url = `${request.protocol}://${(request.headers.host || request.hostname)}${request.originalUrl}`
   const route = `--request ${request?.method.toUpperCase()} '${url}'`
-  var header = ``
-  var body = ``
+  let header = ``;
+  let body = ``;
   if (request.headers) {
-    for (var key in request.headers) {
-      if(!headerExcludings.includes(key))
+    for (const key in request.headers) {
+      if(!headerExcluding.includes(key))
         header += `-H '${key}: ${request.headers[key]}' `
 
     }
